@@ -2,16 +2,16 @@ function getDetails() {
     const date = document.getElementById('date').value;
     const gender = document.getElementById('gender').value;
 
-    alert('Date = '+ date + ' and Gender = '+gender);
+   // alert('Date = '+ date + ' and Gender = '+gender);
 
 
 
 
     const dayOfTheWeek = dayOfWeek(date)
-    alert(dayOfTheWeek);
+    //alert(dayOfTheWeek);
 
     const name = akanName(dayOfTheWeek, gender);
-    alert(name);
+    alert(`You were born on:` +dayOfTheWeek +` and your Akan Name is: `+name);
 
 
 }
@@ -24,11 +24,11 @@ function dayOfWeek(date) {
 
     const CC = parseInt(year.slice(0, 2));
     let YY = parseInt(year.slice(-2));
-    alert(YY % 4);
+   // alert(YY % 4);
 
 
-    const feb = validateFeb(MM, DD, YY);
-    alert(feb);
+    // const feb = validateFeb(MM, DD, YY);
+    // alert(feb);
 
     // Adjust month and year for Zeller's formula
     if (MM < 3) {
@@ -37,25 +37,25 @@ function dayOfWeek(date) {
     }
 
 
-    const ddValid = validateDay(DD);
-    alert(ddValid)
-    if (ddValid == true) {
+    // const ddValid = validateDay(DD);
+    // alert(ddValid)
+    //if (ddValid == true) {
         // Zeller's Congruence calculation
         const h = (DD + Math.floor((13 * (MM + 1)) / 5) + YY + Math.floor(YY / 4) + Math.floor(CC / 4) - 2 * CC) % 7;
 
         // Mapping h to corresponding day of the week
         const days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
         return days[(h + 7) % 7]; // Adjusting for negative values of h
-    }
-    else {
-        return 'Invalid Birthday Date!!!';
-    }
+   // }
+    // else {
+    //     return 'Invalid Birthday Date!!!';
+    // }
 }
 
 
 function validateFeb(mm, dd, yy) {
     const leapYear = yy % 4;
-    alert(mm)
+    //alert(mm)
     if (mm == 2) {
 
         if (dd <= 0 || dd > 29 && leapYear == 0) {
