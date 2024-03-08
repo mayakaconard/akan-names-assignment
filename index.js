@@ -5,18 +5,26 @@ function getDetails() {
    // alert('Date = '+ date + ' and Gender = '+gender);
 
 
-
-
+//    Check if user has entered a future date as birthday
+const validBirthday = checkIfPastDate(date);
+alert(validBirthday);
+if(validBirthday==false){
+    alert("Your birthday should not be in the future!");
+}
+else{
     const dayOfTheWeek = dayOfWeek(date)
-    //alert(dayOfTheWeek);
-
     const name = akanName(dayOfTheWeek, gender);
     alert(`You were born on:` +dayOfTheWeek +` and your Akan Name is: `+name);
+
+}
+
+    
 
 
 }
 
 function dayOfWeek(date) {
+    // Get day, month, year and century from date
     const splitDate = date.split('-');
     const year = splitDate[0];
     const MM = parseInt(splitDate[1]);
@@ -111,4 +119,24 @@ function akanName(day, gender) {
     const dayName = names[gender.toLowerCase()][day];
     return dayName;
 
+}
+
+function isDateValid(date){
+    return isNaN(new Date(date));
+}
+
+
+function checkIfPastDate(date){
+    // The date you want to check
+const inputDate = new Date(date); 
+
+// Get the current date
+const currentDate = new Date();
+
+// Compare the input date with the current date
+if (inputDate > currentDate) {
+  return false;
+} else {
+  return true;
+}
 }
