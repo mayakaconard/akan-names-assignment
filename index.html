@@ -5,19 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Akan Assignment</title>
     <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
+<div class="container">
 <body>
+
     <form>
-        <label for="date">Enter Date of Birth</label>
-        <input type="date" id="date" placeholder="date" />
+        <label for="date">Select Date of Birth</label>
+        <input type="date" id="date" placeholder="date" required/>
         <label for="gender">Select your Gender</label>
 
-            <select name="gender" id="gender">
+            <select name="gender" id="gender" required>
                 <option>Select Gender</option>
                 <option value="male">Male</option>
                 <option value="female">Female</option>
             </select>
     </form>
-    <button type="button" id="submit" onclick="getDetails()">Submit</button>
+    <input type="submit" id="submit" onclick="getDetails()"></input>
 </body>
+</div>
 </html>

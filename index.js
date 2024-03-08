@@ -2,7 +2,7 @@ function getDetails() {
     const date = document.getElementById('date').value;
     const gender = document.getElementById('gender').value;
 
-   // alert('Date = '+ date + ' and Gender = '+gender);
+   alert('Date = '+ date + ' and Gender = '+gender);
 
 
 //    Check if user has entered a future date as birthday
@@ -17,9 +17,6 @@ else{
     alert(`You were born on:` +dayOfTheWeek +` and your Akan Name is: `+name);
 
 }
-
-    
-
 
 }
 
