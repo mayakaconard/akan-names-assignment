@@ -2,18 +2,22 @@ function getDetails() {
     const date = document.getElementById('date').value;
     const gender = document.getElementById('gender').value;
 
-    alert('Date = ' + date + ' and Gender = ' + gender);
-
-    // Validate if null
-    const inputValidation = validateDateAndGender(date, gender)
-    if (inputValidation == false) {
-        alert("All fields are required. Kindly select birhtdate and gender.")
+    if (date == "") {
+        alert("Kindly select your date of birth!")
+    } else if (gender === "") {
+        alert("Kindly select your gender!")
     }
     else {
 
+       // alert('Date = ' + date + ' and Gender = ' + gender);
+
+        // Validate if null
+        // const inputValidation = validateDateAndGender(date, gender)
+
+
         //    Check if user has entered a future date as birthday
         const validBirthday = checkIfPastDate(date);
-       // alert(validBirthday);
+        // alert(validBirthday);
         if (validBirthday == false) {
             alert("Your birthday should not be in the future! Please provide a valid date");
         }
@@ -23,8 +27,9 @@ function getDetails() {
             alert(`You were born on:` + dayOfTheWeek + ` and your Akan Name is: ` + name);
 
         }
-
     }
+
+
 }
 
 function dayOfWeek(date) {
@@ -154,13 +159,13 @@ function checkIfPastDate(date) {
 
 function validateDateAndGender(date, gender) {
     if (date === "" || gender === "") {
-    
+
         return false;
     }
     else {
-        alert (gender);
+        alert(gender);
         return true
-        
+
     }
 
 }
