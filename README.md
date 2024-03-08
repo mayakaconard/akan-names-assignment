@@ -1,10 +1,22 @@
+## Project name
+- Ghanian Akan Names Space
+
+## Project Description
+- A platfor which determines your Ghanian Akan name based on your day of birth and your gender
+
+## Author
+Conard Mayaka, 
+Developer
+
+
 ## Table of Contents
 
 - [Installation](#installation)
 - [Usage](#usage)
-- [Contributing](#contributing)
+- [Technology](#technology)
+- [Contact](#contact)
 - [License](#license)
-
+- [Project](#project)
 ## Installation
 
 1. Clone the repository: `git clone https://github.com/mayakaconard/akan-names-assignment.git`
@@ -14,3 +26,14 @@
 ## Usage
 
 Kindly read the description carefully before interacting with the inputs. 
+
+## Technology
+The project uses HTML, CSS and Javascript.
+
+## Contact
+Email: mayakaconard@gmail.com
+
+## License
+- No license or copyright restrictions.
+
+# Project
