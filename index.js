@@ -126,6 +126,8 @@ function isDateValid(date){
 }
 
 
+
+// Check if the date entered is future or past NB: Birthday cannot be in the future
 function checkIfPastDate(date){
     // The date you want to check
 const inputDate = new Date(date); 
@@ -135,8 +137,12 @@ const currentDate = new Date();
 
 // Compare the input date with the current date
 if (inputDate > currentDate) {
+
+    // Birhtday cannot be in the future
   return false;
 } else {
+
+    // True
   return true;
 }
 }
