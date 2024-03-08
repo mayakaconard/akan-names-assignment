@@ -38,3 +38,7 @@ Email: mayakaconard@gmail.com
 
 # Project
 - URL: https://mayakaconard.github.io/akan-names-assignment/
+
+
+- Screenshot
+![!\[Project sreenshot\]()](assignment.png)
