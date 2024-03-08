@@ -2,7 +2,7 @@ function getDetails() {
     const date = document.getElementById('date').value;
     const gender = document.getElementById('gender').value;
 
-    //alert('Date = ' + date + ' and Gender = ' + gender);
+    alert('Date = ' + date + ' and Gender = ' + gender);
 
     // Validate if null
     const inputValidation = validateDateAndGender(date, gender)
@@ -153,11 +153,14 @@ function checkIfPastDate(date) {
 
 
 function validateDateAndGender(date, gender) {
-    if (date == "" || gender == "") {
+    if (date === "" || gender === "") {
+    
         return false;
     }
     else {
+        alert (gender);
         return true
+        
     }
 
 }
