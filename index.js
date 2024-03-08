@@ -2,22 +2,29 @@ function getDetails() {
     const date = document.getElementById('date').value;
     const gender = document.getElementById('gender').value;
 
-   alert('Date = '+ date + ' and Gender = '+gender);
+    //alert('Date = ' + date + ' and Gender = ' + gender);
 
+    // Validate if null
+    const inputValidation = validateDateAndGender(date, gender)
+    if (inputValidation == false) {
+        alert("All fields are required. Kindly select birhtdate and gender.")
+    }
+    else {
 
-//    Check if user has entered a future date as birthday
-const validBirthday = checkIfPastDate(date);
-alert(validBirthday);
-if(validBirthday==false){
-    alert("Your birthday should not be in the future!");
-}
-else{
-    const dayOfTheWeek = dayOfWeek(date)
-    const name = akanName(dayOfTheWeek, gender);
-    alert(`You were born on:` +dayOfTheWeek +` and your Akan Name is: `+name);
+        //    Check if user has entered a future date as birthday
+        const validBirthday = checkIfPastDate(date);
+       // alert(validBirthday);
+        if (validBirthday == false) {
+            alert("Your birthday should not be in the future! Please provide a valid date");
+        }
+        else {
+            const dayOfTheWeek = dayOfWeek(date)
+            const name = akanName(dayOfTheWeek, gender);
+            alert(`You were born on:` + dayOfTheWeek + ` and your Akan Name is: ` + name);
 
-}
+        }
 
+    }
 }
 
 function dayOfWeek(date) {
@@ -29,7 +36,7 @@ function dayOfWeek(date) {
 
     const CC = parseInt(year.slice(0, 2));
     let YY = parseInt(year.slice(-2));
-   // alert(YY % 4);
+    // alert(YY % 4);
 
 
     // const feb = validateFeb(MM, DD, YY);
@@ -45,13 +52,13 @@ function dayOfWeek(date) {
     // const ddValid = validateDay(DD);
     // alert(ddValid)
     //if (ddValid == true) {
-        // Zeller's Congruence calculation
-        const h = (DD + Math.floor((13 * (MM + 1)) / 5) + YY + Math.floor(YY / 4) + Math.floor(CC / 4) - 2 * CC) % 7;
+    // Zeller's Congruence calculation
+    const h = (DD + Math.floor((13 * (MM + 1)) / 5) + YY + Math.floor(YY / 4) + Math.floor(CC / 4) - 2 * CC) % 7;
 
-        // Mapping h to corresponding day of the week
-        const days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
-        return days[(h + 7) % 7]; // Adjusting for negative values of h
-   // }
+    // Mapping h to corresponding day of the week
+    const days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    return days[(h + 7) % 7]; // Adjusting for negative values of h
+    // }
     // else {
     //     return 'Invalid Birthday Date!!!';
     // }
@@ -118,29 +125,40 @@ function akanName(day, gender) {
 
 }
 
-function isDateValid(date){
+function isDateValid(date) {
     return isNaN(new Date(date));
 }
 
 
 
 // Check if the date entered is future or past NB: Birthday cannot be in the future
-function checkIfPastDate(date){
+function checkIfPastDate(date) {
     // The date you want to check
-const inputDate = new Date(date); 
+    const inputDate = new Date(date);
 
-// Get the current date
-const currentDate = new Date();
+    // Get the current date
+    const currentDate = new Date();
 
-// Compare the input date with the current date
-if (inputDate > currentDate) {
+    // Compare the input date with the current date
+    if (inputDate > currentDate) {
 
-    // Birhtday cannot be in the future
-  return false;
-} else {
+        // Birhtday cannot be in the future
+        return false;
+    } else {
 
-    // True
-  return true;
+        // True
+        return true;
+    }
 }
+
+
+function validateDateAndGender(date, gender) {
+    if (date == "" || gender == "") {
+        return false;
+    }
+    else {
+        return true
+    }
+
 }
 
