@@ -9,13 +9,14 @@
 </head>
 <div class="container">
     <div class="description">
-        <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. <br> Lets see which day you were born and the name that corresponds to your day of Birth!</p>
+        <p>Akan names are derived from Ghanian culture. Frequently in Ghana, children are given their first name as a 'day name' which corresponds to the day in the week they were born. <br> 
+            Lets see which day of the week you were born and your Ghanian name!</p>
       </div>
 <body>
 
     <form>
         <label for="date">Select Date of Birth</label>
-        <input type="date" id="date" placeholder="date" required/>
+        <input type="date" id="date" pattern="\d{4}-\d{2}-\d{2}" placeholder="YYYY-MM-DD"/>
         <label for="gender">Select your Gender</label>
 
             <select name="gender" id="gender" required>
