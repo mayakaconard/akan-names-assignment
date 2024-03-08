@@ -2,7 +2,7 @@
 - Ghanian Akan Names Space
 
 ## Project Description
-- A platfor which determines your Ghanian Akan name based on your day of birth and your gender
+- A platform which determines your Ghanian Akan name based on your day of birth and your gender
 
 ## Author
 Conard Mayaka, 

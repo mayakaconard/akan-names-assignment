@@ -2,11 +2,14 @@ function getDetails() {
     const date = document.getElementById('date').value;
     const gender = document.getElementById('gender').value;
 
+    // Validate inputs
     if (date == "") {
         alert("Kindly select your date of birth!")
     } else if (gender === "") {
         alert("Kindly select your gender!")
     }
+
+    // All is good!
     else {
 
        // alert('Date = ' + date + ' and Gender = ' + gender);
