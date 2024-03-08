@@ -37,3 +37,4 @@ Email: mayakaconard@gmail.com
 - No license or copyright restrictions.
 
 # Project
+- URL: https://mayakaconard.github.io/akan-names-assignment/
